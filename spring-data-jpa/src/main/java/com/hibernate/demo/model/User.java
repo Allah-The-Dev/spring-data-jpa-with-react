@@ -1,6 +1,5 @@
 package com.hibernate.demo.model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.AttributeOverride;
@@ -47,5 +46,5 @@ public class User {
     @JoinTable(name = "user_vehicle", 
         joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "ID"),
         inverseJoinColumns = @JoinColumn(name = "vehicle_id", referencedColumnName = "ID"))
-    private List<Vehicle> vehicles = new ArrayList<>();
+    private List<Vehicle> vehicles;
 }
